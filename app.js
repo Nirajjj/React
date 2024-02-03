@@ -1,23 +1,23 @@
-const heading = React.createElement(
-  "h1",
-  { id: "heading", id: "heading1" },
-  "hello world from React"
-);
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-const div1 = React.createElement("div", { id: "parent" }, [
-  React.createElement("div", { id: "child" }, [
-    React.createElement("h1", { id: "h1" }, "hello from h1"),
-    React.createElement("h2", { id: "h2" }, "hello from h2"),
-  ]),
-  React.createElement("div", { id: "child2" }, [
-    React.createElement("h1", { id: "h12" }, "hello from h1"),
-    React.createElement("h2", { id: "h22" }, "hello from h2"),
-  ]),
-]);
+const jsxHeading = <h1>hello from jsx</h1>;
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(div1);
+//react function components
+const CompostieHeading = () => <h1>this is function components </h1>;
+
+// component compostion
+function ComponentCompostion() {
+  return (
+    <div>
+      <h1>hello</h1>
+      <CompostieHeading />
+    </div>
+  );
+}
+root.render(<ComponentCompostion />);
 
 // const root = document.getElementById("root");
 // ReactDOM.render(div1, root);
