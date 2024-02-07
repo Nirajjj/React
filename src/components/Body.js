@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-// import resList from "../utils/restaurantList";
 import Card from "./Card";
 import Shimmer from "./shimmer";
 const Body = () => {
   const [restaurantList, setrestaurantList] = useState([]);
+  const [filterrestaurantList, setfilterrestaurantList] = useState([]);
   const [searchText, setsearchText] = useState("");
   useEffect(() => {
     fetchData();
@@ -14,6 +14,7 @@ const Body = () => {
     );
     const jsonData = await data.json();
     setrestaurantList(jsonData);
+    setfilterrestaurantList(jsonData);
   };
   return restaurantList.length === 0 ? (
     <Shimmer />
@@ -37,7 +38,7 @@ const Body = () => {
                 .toLowerCase()
                 .includes(searchText.toLowerCase());
             });
-            setrestaurantList(searchFilterList);
+            setfilterrestaurantList(searchFilterList);
 
             console.log(searchFilterList);
           }}
@@ -58,7 +59,7 @@ const Body = () => {
       </div>
 
       <main className="card-container">
-        {restaurantList.map((resto) => (
+        {filterrestaurantList.map((resto) => (
           <Card key={resto.info.id} resObj={resto} />
         ))}
       </main>
