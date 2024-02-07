@@ -1,3 +1,239 @@
-.heading1 {
-  color: red;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+
+  /* filter: invert(1); */
+}
+.body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #f3f3f3;
+}
+.root {
+  width: 100%;
+  height: 100%;
+}
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 70px;
+  border-bottom: 1px solid gray;
+  height: 70px;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+.main-header h1 {
+  font-family: "Lobster", sans-serif;
+  position: relative;
+  height: 57px;
+  color: teal;
+}
+
+.main-header h1::after {
+  content: "made width heart";
+  font-size: 10px;
+  font-family: "Poppins", sans-serif;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.main-header ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  margin: 0 5px;
+  width: 40vw;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  padding: 10px;
+}
+.main-header ul li {
+  cursor: pointer;
+}
+.body-container {
+  display: grid;
+  grid-template-rows: 40px 1fr;
+  margin-top: 20px;
+  background-color: #f3f3f3;
+  /* display: flex;
+  flex-direction: column; */
+  /* align-items: center; */
+}
+.fullpage {
+  background-color: #f3f3f3;
+  min-height: 100vh;
+}
+.card {
+  width: 17vw;
+  height: 300px;
+  border-radius: 7px;
+  display: grid;
+  grid-template-rows: 200px 75px;
+  grid-template-columns: 50% 50%;
+  padding: 7px 7px;
+  align-content: space-around;
+  /* box-sizing: border-box; */
+  margin: 5px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.card:hover {
+  /* border: 1px solid black; */
+  box-shadow: 0px 0px 7px 0.1px black;
+}
+.card-photo {
+  width: 100%;
+  grid-column: 1 / 3;
+  display: flex;
+  justify-self: center;
+  align-self: flex-start;
+  border-radius: 7px;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-info-right {
+  text-align: end;
+}
+
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 140px;
+  justify-content: start;
+  height: 100%;
+  flex-shrink: 0px;
+  gap: 10px;
+  /* margin-top: 70px; */
+}
+.card-info-right p:nth-child(1) {
+  background-color: #267e3e;
+  border-radius: 4px;
+  padding: 1px 3px;
+  display: inline;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.card-subinfo {
+  font-size: 13px;
+  color: grey;
+  font-weight: 600;
+  overflow: hidden;
+  /* text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 10px; */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+h4 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.rating-btn,
+.search-btn {
+  background-color: #43766c;
+  color: white;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  width: 7em;
+  /* border: 1px solid burlywood; */
+  border-bottom: 4px solid #00b3b3;
+  border-left: 2px solid #00b3b3;
+  border-right: 2px solid #00b3b3;
+  justify-self: center;
+  box-sizing: border-box;
+  font-weight: 600;
+  margin: 0px 5px;
+  box-sizing: border-box;
+}
+
+.rating-btn:hover,
+.search-btn:hover {
+  background-color: #428679;
+}
+
+.rating-btn:active,
+.search-btn:active {
+  border: 1px solid #00b3b3;
+}
+
+.shimmer-card-container {
+  display: flex;
+  margin: 7vh 0px 0px 10vw;
+  flex-wrap: wrap;
+}
+.shimmer-card {
+  width: 17vw;
+  height: 300px;
+  border-radius: 7px;
+  /* background-color: rgb(150, 148, 148); */
+  margin: 15px;
+  display: grid;
+  grid-template-rows: 200px 75px;
+  padding: 7px;
+  align-content: space-around;
+}
+
+.shimmer-photo {
+  width: 90%;
+  background-color: rgb(150, 148, 148);
+  border-radius: 7px;
+}
+
+.shimmer-heading {
+  width: 120px;
+  background-color: rgb(150, 148, 148);
+  border-radius: 7px;
+  height: 10px;
+}
+
+.shimmer-subheading {
+  width: 50px;
+  background-color: rgb(150, 148, 148);
+  border-radius: 7px;
+  height: 10px;
+  margin-top: 5px;
+}
+
+.login-btn {
+  background-color: #43766c;
+  /* padding: 5px 10px; */
+  width: 15%;
+  height: 4em;
+  border: none;
+  border-radius: 5px;
+  border-bottom: 4px solid #00b3b3;
+  border-left: 4px solid #00b3b3;
+  color: white;
+}
+
+.login-btn:active {
+  border: 1px solid #00b3b3;
+}
+
+.search-input {
+  border: none;
+  border: 2px solid #43766c;
+  padding: 5px;
+  border-radius: 5px;
+  /* margin-top: 7px; */
+}
+
+.body-btn-container {
+  padding: 0 140px;
+  display: flex;
 }

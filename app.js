@@ -1,23 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import Header from "./src/components/Header";
+import Body from "./src/components/Body";
 
-const jsxHeading = <h1>hello from jsx</h1>;
+const FullPage = () => (
+  <div className="fullpage">
+    <Header />
+    <Body />
+  </div>
+);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-//react function components
-const CompostieHeading = () => <h1>this is function components </h1>;
-
-// component compostion
-function ComponentCompostion() {
-  return (
-    <div>
-      <h1>hello</h1>
-      <CompostieHeading />
-    </div>
-  );
-}
-root.render(<ComponentCompostion />);
+root.render(<FullPage />);
 
 // const root = document.getElementById("root");
 // ReactDOM.render(div1, root);
