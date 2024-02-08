@@ -1,14 +1,23 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 const Header = () => {
   const [btn, setbtn] = useState("Login");
   return (
     <header className="main-header">
-      <h1>DineEase</h1>
+      <h1>
+        <Link to={"/"}>DineEase</Link>
+      </h1>
       <ul>
-        <li>Home</li>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
         <li>Offers</li>
-        <li>Help</li>
-        <li>About us</li>
+        <li>
+          <Link to="/Contact">Help</Link>
+        </li>
+        <li>
+          <Link to="/About">About us</Link>
+        </li>
         <li>Cart</li>
         <button
           className="login-btn"
