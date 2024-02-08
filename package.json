@@ -1,11 +1,14 @@
 {
+  "homepage": "https://nirajjj.github.io/React",
   "name": "react",
   "version": "1.0.0",
   "description": "encoding react",
   "scripts": {
     "test": "jest",
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "author": "Niraj Parab",
   "license": "ISC",
