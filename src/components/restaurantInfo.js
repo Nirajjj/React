@@ -10,7 +10,11 @@ const Resinfo = () => {
     fetchData();
   }, []);
   const fetchData = async () => {
-    const resInfo = await fetch(resInfo_API + resID);
+    const resInfo = await fetch(resInfo_API + resID, {
+      headers: {
+        "x-cors-api-key": "temp_d3d854db3c595f104dc6125d136a1eb1",
+      },
+    });
     const jsonData = await resInfo.json();
     console.log(
       jsonData?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]
