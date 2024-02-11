@@ -1,0 +1,4 @@
+[[redirects]]
+  from = "/*"
+  to = "https://main--dine-ease.netlify.app/"
+  status = 200
