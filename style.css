@@ -14,11 +14,12 @@
   width: 100%;
   height: 100%;
 }
-a {
+a,
+.github-link {
   /* color: inherit;
   text-decoration: none; */
-  cursor: pointer;
   all: unset;
+  cursor: pointer;
 }
 .main-header {
   display: flex;
@@ -36,6 +37,7 @@ a {
   position: relative;
   height: 57px;
   color: teal;
+  cursor: pointer;
 }
 
 .main-header h1::after {
@@ -246,4 +248,22 @@ h4 {
 
 button {
   cursor: pointer;
+}
+
+.about-card-container {
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-card {
+  width: 70%;
+  height: 70vh;
+}
+
+.about-heading {
+  text-align: center;
 }

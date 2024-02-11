@@ -3,6 +3,7 @@ import Card from "./Card";
 import Shimmer from "./shimmer";
 import res_API from "../utils/resApi";
 import { Link } from "react-router-dom";
+``;
 import Resinfo from "./restaurantInfo";
 const Body = () => {
   const [restaurantList, setrestaurantList] = useState([]);
@@ -68,6 +69,14 @@ const Body = () => {
         >
           4.5 &#9733;
         </button>
+        <button
+          className="rating-btn"
+          onClick={() => {
+            setfilterrestaurantList(restaurantList);
+          }}
+        >
+          all
+        </button>
       </div>
 
       <main className="card-container">
@@ -82,3 +91,4 @@ const Body = () => {
 };
 
 export default Body;
+// export restaurantList;
