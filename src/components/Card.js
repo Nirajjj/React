@@ -1,4 +1,5 @@
 import IMG_URL from "../utils/img";
+import React from "react";
 
 const Card = (props) => {
   const { resObj } = props;

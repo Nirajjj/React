@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import Body from "./Body";
 const Header = () => {
   const [btn, setbtn] = useState("Login");
   return (
@@ -12,7 +11,6 @@ const Header = () => {
         <li>
           <Link to="/">Home</Link>
         </li>
-        <li>Offers</li>
         <li>
           <Link to="/Contact">Help</Link>
         </li>

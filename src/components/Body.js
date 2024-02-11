@@ -3,8 +3,9 @@ import Card from "./Card";
 import Shimmer from "./shimmer";
 import res_API from "../utils/resApi";
 import { Link } from "react-router-dom";
-``;
-import Resinfo from "./restaurantInfo";
+import useOnlineStatus from "../utils/useOnlineStatus";
+import React from "react";
+
 const Body = () => {
   const [restaurantList, setrestaurantList] = useState([]);
   const [filterrestaurantList, setfilterrestaurantList] = useState([]);
@@ -29,6 +30,10 @@ const Body = () => {
         ?.restaurants
     );
   };
+  const onlineStatus = useOnlineStatus();
+  if (onlineStatus === false)
+    return <h2>Check your internet connection! 🔴</h2>;
+
   return restaurantList.length === 0 ? (
     <Shimmer />
   ) : (
@@ -56,7 +61,7 @@ const Body = () => {
             // console.log(searchFilterList);
           }}
         >
-          search
+          Search
         </button>
         <button
           className="rating-btn"
