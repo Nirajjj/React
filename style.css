@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   margin: 0;
   padding: 0;
@@ -32,21 +37,12 @@ a,
   top: 0;
   background-color: white;
 }
-.main-header h1 {
+.main-header link h1 {
   font-family: "Lobster", sans-serif;
   position: relative;
   height: 57px;
   color: teal;
   cursor: pointer;
-}
-
-.main-header h1::after {
-  content: "made width heart";
-  font-size: 10px;
-  font-family: "Poppins", sans-serif;
-  position: absolute;
-  bottom: 0;
-  right: 0;
 }
 
 .main-header ul {

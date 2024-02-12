@@ -4,8 +4,13 @@ const Header = () => {
   const [btn, setbtn] = useState("Login");
   return (
     <header className="main-header">
-      <h1>
-        <Link to={"/"}>DineEase</Link>
+      <h1 className="font-lob font">
+        <Link
+          to={"/"}
+          className="font-lob font-semibold text-[#43766c] text-2xl"
+        >
+          DineEase
+        </Link>
       </h1>
       <ul>
         <li>

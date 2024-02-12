@@ -19,7 +19,7 @@ const Card = (props) => {
         className="card-photo"
       />
       <header>
-        <h4>{name}</h4>
+        <h4 className="font-bold">{name}</h4>
         <p className="card-subinfo">{cuisines.join(", ")}</p>
       </header>
       <section className="card-info-right">

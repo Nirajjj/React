@@ -15,7 +15,7 @@ class UserClass extends React.Component {
       <div className="about-card-container">
         <div className="about-card">
           <div>
-            <h1>Niraj Parab</h1>
+            <h1 className="font-bold text-xl">Niraj Parab</h1>
             <p>
               🚀 Dynamic self-taught full-stack developer evolving from a
               successful background in management. Proficient in both front-end
@@ -28,7 +28,7 @@ class UserClass extends React.Component {
             </p>
           </div>
           <div>
-            <h1>Website Details</h1>
+            <h1 className="font-bold text-xl">Website Details</h1>
             <p>
               🚀Dine with dynamism! Book your next restaurant experience through
               a captivating single-page React application, fueled by the live
@@ -41,7 +41,7 @@ class UserClass extends React.Component {
             </p>
             <h3>
               <a
-                className="github-link"
+                className="font-bold text-xl underline"
                 href="https://github.com/Nirajjj/React"
               >
                 click here to see the code
