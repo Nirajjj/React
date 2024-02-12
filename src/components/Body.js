@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Card from "./Card";
+import Card, { withOpenedLabal } from "./Card";
 import Shimmer from "./shimmer";
 import res_API from "../utils/resApi";
 import { Link } from "react-router-dom";
@@ -10,6 +10,7 @@ const Body = () => {
   const [restaurantList, setrestaurantList] = useState([]);
   const [filterrestaurantList, setfilterrestaurantList] = useState([]);
   const [searchText, setsearchText] = useState("");
+  const OpenedRes = withOpenedLabal(Card);
   useEffect(() => {
     fetchData();
   }, []);
@@ -83,7 +84,12 @@ const Body = () => {
       <main className="card-container">
         {filterrestaurantList.map((resto) => (
           <Link key={resto.info.id} to={"/restaurant/" + resto.info.id}>
-            <Card resObj={resto} />
+            {console.log(resto)}
+            {resto?.info?.isOpen ? (
+              <OpenedRes resObj={resto} />
+            ) : (
+              <Card resObj={resto} />
+            )}
           </Link>
         ))}
       </main>

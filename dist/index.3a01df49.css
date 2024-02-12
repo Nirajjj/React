@@ -245,6 +245,46 @@ img, video {
   --tw-backdrop-sepia: ;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.bottom-0 {
+  bottom: 0;
+}
+
+.right-\[10px\] {
+  right: 10px;
+}
+
+.bottom-\[5px\] {
+  bottom: 5px;
+}
+
+.bottom-\[10px\] {
+  bottom: 10px;
+}
+
+.bottom-\[15px\] {
+  bottom: 15px;
+}
+
+.bottom-\[12px\] {
+  bottom: 12px;
+}
+
+.bottom-\[19px\] {
+  bottom: 19px;
+}
+
+.bottom-\[20px\] {
+  bottom: 20px;
+}
+
 .row-span-2 {
   grid-row: span 2 / span 2;
 }
@@ -348,14 +388,24 @@ img, video {
   line-height: 2rem;
 }
 
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-sm {
+  font-size: .875rem;
+  line-height: 1.25rem;
+}
+
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
 }
 
-.text-3xl {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
+.text-xs {
+  font-size: .75rem;
+  line-height: 1rem;
 }
 
 .font-bold {
@@ -369,6 +419,11 @@ img, video {
 .text-\[\#43766c\] {
   --tw-text-opacity: 1;
   color: rgb(67 118 108 / var(--tw-text-opacity));
+}
+
+.text-\[\#A0A0A0\] {
+  --tw-text-opacity: 1;
+  color: rgb(160 160 160 / var(--tw-text-opacity));
 }
 
 .underline {
