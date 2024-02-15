@@ -5,6 +5,7 @@ import MenuShimmer from "./MenuShimmer";
 
 const Resinfo = () => {
   const { resID } = useParams();
+  debugger;
   const resInfo = useRestaurantInfo(resID);
   return resInfo.length === 0 ? (
     <MenuShimmer />

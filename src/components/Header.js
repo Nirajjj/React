@@ -3,15 +3,13 @@ import { Link } from "react-router-dom";
 const Header = () => {
   const [btn, setbtn] = useState("Login");
   return (
-    <header className="main-header z-10">
-      <h1 className="font-lob font">
-        <Link
-          to={"/"}
-          className="font-lob font-semibold text-[#43766c] text-2xl"
-        >
+    <header className="main-header z-10 shadow-lg">
+      <Link to={"/"} className="font-lob font-semibold text-[#43766c] text-2xl">
+        <h1 className="font-lob font" id="logo">
           DineEase
-        </Link>
-      </h1>
+        </h1>
+      </Link>
+
       <ul>
         <li>
           <Link to="/">Home</Link>

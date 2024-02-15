@@ -27276,13 +27276,14 @@ const Header = ()=>{
     _s();
     const [btn, setbtn] = (0, _react.useState)("Login");
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("header", {
-        className: "main-header z-10",
+        className: "main-header z-10 shadow-lg",
         children: [
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
-                className: "font-lob font",
-                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
-                    to: "/",
-                    className: "font-lob font-semibold text-[#43766c] text-2xl",
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _reactRouterDom.Link), {
+                to: "/",
+                className: "font-lob font-semibold text-[#43766c] text-2xl",
+                children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+                    className: "font-lob font",
+                    id: "logo",
                     children: "DineEase"
                 }, void 0, false, {
                     fileName: "src/components/Header.js",
@@ -27302,12 +27303,12 @@ const Header = ()=>{
                             children: "Home"
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 17,
+                            lineNumber: 15,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/Header.js",
-                        lineNumber: 16,
+                        lineNumber: 14,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -27316,12 +27317,12 @@ const Header = ()=>{
                             children: "Help"
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 20,
+                            lineNumber: 18,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/Header.js",
-                        lineNumber: 19,
+                        lineNumber: 17,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
@@ -27330,19 +27331,19 @@ const Header = ()=>{
                             children: "About us"
                         }, void 0, false, {
                             fileName: "src/components/Header.js",
-                            lineNumber: 23,
+                            lineNumber: 21,
                             columnNumber: 11
                         }, undefined)
                     }, void 0, false, {
                         fileName: "src/components/Header.js",
-                        lineNumber: 22,
+                        lineNumber: 20,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
                         children: "Cart"
                     }, void 0, false, {
                         fileName: "src/components/Header.js",
-                        lineNumber: 25,
+                        lineNumber: 23,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27353,13 +27354,13 @@ const Header = ()=>{
                         children: btn
                     }, void 0, false, {
                         fileName: "src/components/Header.js",
-                        lineNumber: 26,
+                        lineNumber: 24,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Header.js",
-                lineNumber: 15,
+                lineNumber: 13,
                 columnNumber: 7
             }, undefined)
         ]
@@ -34072,11 +34073,12 @@ const Body = ()=>{
         fetchData();
     }, []);
     const fetchData = async ()=>{
-        const data = await fetch((0, _resApiDefault.default), {
-            headers: {
-                "x-cors-api-key": "temp_d3d854db3c595f104dc6125d136a1eb1"
-            }
-        });
+        const data = await fetch((0, _resApiDefault.default));
+        //   , {
+        //   headers: {
+        //     "x-cors-api-key": "temp_d3d854db3c595f104dc6125d136a1eb1",
+        //   },
+        // });
         const jsonData = await data.json();
         setrestaurantList(jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setfilterrestaurantList(jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
@@ -34086,12 +34088,12 @@ const Body = ()=>{
         children: "Check your internet connection! \uD83D\uDD34"
     }, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 36,
+        lineNumber: 37,
         columnNumber: 12
     }, undefined);
     return restaurantList.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 39,
+        lineNumber: 40,
         columnNumber: 5
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "body-container",
@@ -34108,7 +34110,7 @@ const Body = ()=>{
                         }
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 43,
+                        lineNumber: 44,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34123,7 +34125,7 @@ const Body = ()=>{
                         children: "Search"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 52,
+                        lineNumber: 53,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34135,7 +34137,7 @@ const Body = ()=>{
                         children: "4.5 \u2605"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 67,
+                        lineNumber: 68,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34146,13 +34148,13 @@ const Body = ()=>{
                         children: "all"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 78,
+                        lineNumber: 79,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 42,
+                lineNumber: 43,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
@@ -34165,30 +34167,30 @@ const Body = ()=>{
                                 resObj: resto
                             }, void 0, false, {
                                 fileName: "src/components/Body.js",
-                                lineNumber: 93,
+                                lineNumber: 94,
                                 columnNumber: 15
                             }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default), {
                                 resObj: resto
                             }, void 0, false, {
                                 fileName: "src/components/Body.js",
-                                lineNumber: 95,
+                                lineNumber: 96,
                                 columnNumber: 15
                             }, undefined)
                         ]
                     }, resto.info.id, true, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 90,
+                        lineNumber: 91,
                         columnNumber: 11
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 88,
+                lineNumber: 89,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 41,
+        lineNumber: 42,
         columnNumber: 5
     }, undefined);
 };
@@ -35139,7 +35141,7 @@ $RefreshReg$(_c, "Shimmer");
 },{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7YPVQ":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-const res_API = "https://proxy.cors.sh/https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.19610&lng=73.00030&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
+const res_API = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.19610&lng=73.00030&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
 exports.default = res_API; // https://proxy.cors.sh/
  // "https://my-json-server.typicode.com/Nirajjj/json-hosting/restaurant";
  // "https://proxy.cors.sh/https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.19610&lng=73.00030&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
@@ -35474,10 +35476,11 @@ var _s = $RefreshSig$();
 const Resinfo = ()=>{
     _s();
     const { resID } = (0, _reactRouterDom.useParams)();
+    debugger;
     const resInfo = (0, _useRestaurantInfoDefault.default)(resID);
     return resInfo.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _menuShimmerDefault.default), {}, void 0, false, {
         fileName: "src/components/restaurantInfo.js",
-        lineNumber: 10,
+        lineNumber: 11,
         columnNumber: 5
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         children: [
@@ -35486,7 +35489,7 @@ const Resinfo = ()=>{
                 children: "Menu"
             }, void 0, false, {
                 fileName: "src/components/restaurantInfo.js",
-                lineNumber: 13,
+                lineNumber: 14,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
@@ -35495,18 +35498,18 @@ const Resinfo = ()=>{
                         resInfocard: info
                     }, void 0, false, {
                         fileName: "src/components/restaurantInfo.js",
-                        lineNumber: 17,
+                        lineNumber: 18,
                         columnNumber: 11
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/restaurantInfo.js",
-                lineNumber: 15,
+                lineNumber: 16,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/restaurantInfo.js",
-        lineNumber: 12,
+        lineNumber: 13,
         columnNumber: 5
     }, undefined);
 };
@@ -35546,11 +35549,12 @@ function useRestaurantInfo(resID) {
         fetchData();
     }, []);
     const fetchData = async ()=>{
-        const resInfo = await fetch((0, _resInfoDefault.default) + resID, {
-            headers: {
-                "x-cors-api-key": "temp_d3d854db3c595f104dc6125d136a1eb1"
-            }
-        });
+        const resInfo = await fetch((0, _resInfoDefault.default) + resID);
+        // , {
+        //   headers: {
+        //     "x-cors-api-key": "temp_d3d854db3c595f104dc6125d136a1eb1",
+        //   },
+        // });
         const jsonData = await resInfo.json();
         console.log(jsonData?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card.card.itemCards || jsonData?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card.categories[0].itemCards);
         setresInfo(jsonData?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card.card.itemCards || jsonData?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card.categories[0].itemCards);
@@ -35568,7 +35572,7 @@ exports.default = useRestaurantInfo;
 },{"../utils/resInfo":"kZf0a","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kZf0a":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-const resInfo_API = "https://proxy.cors.sh/https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=19.19610&lng=73.00030&restaurantId=";
+const resInfo_API = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=19.19610&lng=73.00030&restaurantId=";
 exports.default = resInfo_API; // https://proxy.cors.sh/
  //  + resID + "&catalog_qa=undefined&submitAction=ENTER"
  // http://localhost:1234/restaurant/23739
