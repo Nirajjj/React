@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   const [btn, setbtn] = useState("Login");
   return (
-    <header className="main-header">
+    <header className="main-header z-10">
       <h1 className="font-lob font">
         <Link
           to={"/"}

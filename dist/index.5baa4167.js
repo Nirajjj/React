@@ -27276,7 +27276,7 @@ const Header = ()=>{
     _s();
     const [btn, setbtn] = (0, _react.useState)("Login");
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("header", {
-        className: "main-header",
+        className: "main-header z-10",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
                 className: "font-lob font",
@@ -34072,7 +34072,11 @@ const Body = ()=>{
         fetchData();
     }, []);
     const fetchData = async ()=>{
-        const data = await fetch((0, _resApiDefault.default));
+        const data = await fetch((0, _resApiDefault.default), {
+            headers: {
+                "x-cors-api-key": "temp_d3d854db3c595f104dc6125d136a1eb1"
+            }
+        });
         const jsonData = await data.json();
         setrestaurantList(jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
         setfilterrestaurantList(jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
@@ -34082,12 +34086,12 @@ const Body = ()=>{
         children: "Check your internet connection! \uD83D\uDD34"
     }, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 32,
+        lineNumber: 36,
         columnNumber: 12
     }, undefined);
     return restaurantList.length === 0 ? /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shimmerDefault.default), {}, void 0, false, {
         fileName: "src/components/Body.js",
-        lineNumber: 35,
+        lineNumber: 39,
         columnNumber: 5
     }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "body-container",
@@ -34104,7 +34108,7 @@ const Body = ()=>{
                         }
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 39,
+                        lineNumber: 43,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34119,7 +34123,7 @@ const Body = ()=>{
                         children: "Search"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 48,
+                        lineNumber: 52,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34131,7 +34135,7 @@ const Body = ()=>{
                         children: "4.5 \u2605"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 63,
+                        lineNumber: 67,
                         columnNumber: 9
                     }, undefined),
                     /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -34142,13 +34146,13 @@ const Body = ()=>{
                         children: "all"
                     }, void 0, false, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 74,
+                        lineNumber: 78,
                         columnNumber: 9
                     }, undefined)
                 ]
             }, void 0, true, {
                 fileName: "src/components/Body.js",
-                lineNumber: 38,
+                lineNumber: 42,
                 columnNumber: 7
             }, undefined),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("main", {
@@ -34161,30 +34165,30 @@ const Body = ()=>{
                                 resObj: resto
                             }, void 0, false, {
                                 fileName: "src/components/Body.js",
-                                lineNumber: 89,
+                                lineNumber: 93,
                                 columnNumber: 15
                             }, undefined) : /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _cardDefault.default), {
                                 resObj: resto
                             }, void 0, false, {
                                 fileName: "src/components/Body.js",
-                                lineNumber: 91,
+                                lineNumber: 95,
                                 columnNumber: 15
                             }, undefined)
                         ]
                     }, resto.info.id, true, {
                         fileName: "src/components/Body.js",
-                        lineNumber: 86,
+                        lineNumber: 90,
                         columnNumber: 11
                     }, undefined))
             }, void 0, false, {
                 fileName: "src/components/Body.js",
-                lineNumber: 84,
+                lineNumber: 88,
                 columnNumber: 7
             }, undefined)
         ]
     }, void 0, true, {
         fileName: "src/components/Body.js",
-        lineNumber: 37,
+        lineNumber: 41,
         columnNumber: 5
     }, undefined);
 };
@@ -35135,8 +35139,9 @@ $RefreshReg$(_c, "Shimmer");
 },{"react/jsx-dev-runtime":"iTorj","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"7YPVQ":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-const res_API = "https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.19610&lng=73.00030&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
-exports.default = res_API; // "https://my-json-server.typicode.com/Nirajjj/json-hosting/restaurant";
+const res_API = "https://proxy.cors.sh/https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.19610&lng=73.00030&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING";
+exports.default = res_API; // https://proxy.cors.sh/
+ // "https://my-json-server.typicode.com/Nirajjj/json-hosting/restaurant";
  // "https://proxy.cors.sh/https://www.swiggy.com/dapi/restaurants/list/v5?lat=19.19610&lng=73.00030&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"181Ji":[function(require,module,exports) {
@@ -35541,7 +35546,11 @@ function useRestaurantInfo(resID) {
         fetchData();
     }, []);
     const fetchData = async ()=>{
-        const resInfo = await fetch((0, _resInfoDefault.default) + resID);
+        const resInfo = await fetch((0, _resInfoDefault.default) + resID, {
+            headers: {
+                "x-cors-api-key": "temp_d3d854db3c595f104dc6125d136a1eb1"
+            }
+        });
         const jsonData = await resInfo.json();
         console.log(jsonData?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card.card.itemCards || jsonData?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card.categories[0].itemCards);
         setresInfo(jsonData?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card.card.itemCards || jsonData?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card?.card.categories[0].itemCards);
@@ -35559,11 +35568,9 @@ exports.default = useRestaurantInfo;
 },{"../utils/resInfo":"kZf0a","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"kZf0a":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-const resInfo_API = "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=19.19610&lng=73.00030&restaurantId=";
-exports.default = resInfo_API; //
- // 23739
+const resInfo_API = "https://proxy.cors.sh/https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=19.19610&lng=73.00030&restaurantId=";
+exports.default = resInfo_API; // https://proxy.cors.sh/
  //  + resID + "&catalog_qa=undefined&submitAction=ENTER"
- // 614561
  // http://localhost:1234/restaurant/23739
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"g8WxJ":[function(require,module,exports) {
