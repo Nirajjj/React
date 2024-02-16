@@ -1,4 +1,4 @@
-import { IMG_URL } from "../utils/Constatns";
+import { IMG_URL } from "../utils/constatns";
 import React from "react";
 
 const Card = (props) => {
