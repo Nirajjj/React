@@ -1,16 +1,13 @@
 import { useState } from "react";
 import { IMG_URL } from "../utils/constatns";
 import ResMenuCardData from "./ResMenuData";
-const RestoMenuCard = ({ resInfocard }) => {
-  // const { name, price, imageId } = resInfocard?.card?.info;
-  console.log(resInfocard);
+const RestoMenuCard = ({ resInfocard, showItems, setShowIndex }) => {
+  console.log(setShowIndex);
   const { title } = resInfocard?.card?.card;
   const { itemCards } = resInfocard?.card?.card;
-  const [showItems, setShowItems] = useState(false);
-  // console.log(itemCards);
   function dropDown() {
     console.log("clicked");
-    setShowItems(!showItems);
+    setShowIndex();
   }
   return (
     <div className=" mb-3 w-[50vw] cursor-pointer transition-all duration-1000">

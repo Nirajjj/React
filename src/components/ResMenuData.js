@@ -2,7 +2,6 @@ import { IMG_URL } from "../utils/constatns";
 
 const ResMenuCardData = ({ resData }) => {
   const { itemCards } = resData?.card?.card;
-  // const { name, imageId } = itemCards?.card?.info;
   const price =
     itemCards?.card?.info?.price || itemCards?.card?.info?.defaultPrice;
   return itemCards.map((card) => (

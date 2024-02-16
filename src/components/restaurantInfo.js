@@ -2,11 +2,14 @@ import useRestaurantInfo from "../utils/useRestaurantInfo";
 import { useParams } from "react-router-dom";
 import RestoMenuCard from "./RestoMenuCardHead";
 import MenuShimmer from "./MenuShimmer";
+import { useState } from "react";
 
 const Resinfo = () => {
   const { resID } = useParams();
   const resInfo = useRestaurantInfo(resID);
-  console.log(resInfo);
+  const [showIndex, setShowIndex] = useState(0);
+
+  console.log(showIndex);
   const categories = resInfo.filter((c) => {
     return (
       c.card?.card?.["@type"] ===
@@ -24,8 +27,23 @@ const Resinfo = () => {
       </h1>
 
       <div className="">
-        {categories.map((info) => (
-          <RestoMenuCard resInfocard={info} />
+        {categories.map((info, index) => (
+          <RestoMenuCard
+            key={index}
+            resInfocard={info}
+            showItems={index === showIndex ? true : false}
+            setShowIndex={() =>
+              setShowIndex((prevIndex) => {
+                if (prevIndex === index) {
+                  // If the clicked index is already open, close it by setting showIndex to -1
+                  return -1;
+                } else {
+                  // Otherwise, open the clicked index
+                  return index;
+                }
+              })
+            }
+          />
         ))}
       </div>
     </div>

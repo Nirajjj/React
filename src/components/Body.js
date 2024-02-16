@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Card, { withOpenedLabal } from "./Card";
 import Shimmer from "./shimmer";
-import { res_API } from "../utils/Constatns";
+import { res_API } from "../utils/constatns";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import React from "react";
@@ -15,12 +15,11 @@ const Body = () => {
     fetchData();
   }, []);
   const fetchData = async () => {
-    const data = await fetch(res_API);
-    //   , {
-    //   headers: {
-    //     "x-cors-api-key": "temp_d3d854db3c595f104dc6125d136a1eb1",
-    //   },
-    // });
+    const data = await fetch(res_API, {
+      headers: {
+        "x-cors-api-key": "temp_d3d854db3c595f104dc6125d136a1eb1",
+      },
+    });
     const jsonData = await data.json();
 
     setrestaurantList(
