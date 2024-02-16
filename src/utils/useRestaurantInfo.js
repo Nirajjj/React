@@ -1,4 +1,4 @@
-import resInfo_API from "../utils/resInfo";
+import { resInfo_API } from "./constatns";
 import { useState, useEffect } from "react";
 function useRestaurantInfo(resID) {
   const [resInfo, setresInfo] = useState([]);
@@ -14,20 +14,18 @@ function useRestaurantInfo(resID) {
     //   },
     // });
     const jsonData = await resInfo.json();
-    console.log(
-      jsonData?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]
-        ?.card.card.itemCards ||
-        jsonData?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]
-          ?.card?.card.categories[0].itemCards
-    );
+    // console.log(
+    //   jsonData?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards
+    // );
     setresInfo(
-      jsonData?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]
-        ?.card.card.itemCards ||
-        jsonData?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]
-          ?.card?.card.categories[0].itemCards
+      jsonData?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards
     );
   };
   return resInfo;
 }
 
 export default useRestaurantInfo;
+
+// [2]?.card.card.itemCards ||
+//   jsonData?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
+//     ?.card.categories[0].itemCards;

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Card, { withOpenedLabal } from "./Card";
 import Shimmer from "./shimmer";
-import res_API from "../utils/resApi";
+import { res_API } from "../utils/Constatns";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import React from "react";
@@ -89,7 +89,6 @@ const Body = () => {
       <main className="card-container">
         {filterrestaurantList.map((resto) => (
           <Link key={resto.info.id} to={"/restaurant/" + resto.info.id}>
-            {console.log(resto)}
             {resto?.info?.isOpen ? (
               <OpenedRes resObj={resto} />
             ) : (
