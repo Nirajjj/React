@@ -1,7 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
 
 * {
   margin: 0;
@@ -28,9 +33,9 @@ a,
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px 70px;
+  padding: 5px 30px 5px 80px;
   /* border-bottom: 1px solid gray; */
-  height: 70px;
+  height: 75px;
   position: sticky;
   top: 0;
   background-color: white;
@@ -53,7 +58,7 @@ a,
   align-items: center;
   list-style-type: none;
   margin: 0 5px;
-  width: 40vw;
+  width: 45vw;
   font-size: 15px;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
@@ -61,6 +66,22 @@ a,
 }
 .main-header ul li {
   cursor: pointer;
+}
+.after::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background-color: #43766c;
+  display: block;
+  left: 0;
+  transition: 0.5s;
+  /* border-radius: 7px; */
+}
+.after:hover::after {
+  width: 100%;
+}
+.after.active::after {
+  width: 100%;
 }
 .body-container {
   display: grid;
@@ -113,13 +134,15 @@ a,
 .card-container {
   display: flex;
   flex-wrap: wrap;
-  justify-self: center;
+  justify-self: start;
   /* padding: 0 140px; */
-  justify-content: center;
+  justify-content: start;
   height: 100%;
-  width: 90vw;
+  width: 74vw;
   flex-shrink: 0px;
   gap: 10px;
+  /* align-self: center; */
+  justify-self: center;
   /* margin-top: 70px; */
 }
 .card-info-right p:nth-child(1) {
@@ -220,15 +243,15 @@ h4 {
 }
 
 .login-btn {
-  background-color: #43766c;
+  background-color: white;
   /* padding: 5px 10px; */
   width: 15%;
   height: 4em;
-  border: none;
+  border: 1px solid #43766c;
   border-radius: 5px;
   border-bottom: 4px solid #00b3b3;
   border-left: 4px solid #00b3b3;
-  color: white;
+  color: #43766c;
 }
 
 .login-btn:active {
@@ -246,7 +269,7 @@ h4 {
 .body-btn-container {
   /* padding: 0 140px; */
   display: flex;
-  width: 71vw;
+  width: 72vw;
   justify-self: center;
 }
 

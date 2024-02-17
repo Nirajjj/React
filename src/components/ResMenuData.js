@@ -1,7 +1,13 @@
 import { IMG_URL } from "../utils/constatns";
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice.js";
 
 const ResMenuCardData = ({ resData }) => {
   const { itemCards } = resData?.card?.card;
+  const dispatch = useDispatch();
+  const handleClick = (card) => {
+    dispatch(addItem(card));
+  };
   const price =
     itemCards?.card?.info?.price || itemCards?.card?.info?.defaultPrice;
   return itemCards.map((card) => (
@@ -16,9 +22,12 @@ const ResMenuCardData = ({ resData }) => {
       </div>
       <div className="w-3/12 bg-blue-300 rounded-lg relative">
         <img src={IMG_URL + card?.card?.info?.imageId} className="rounded-md" />
-        <div className="absolute bg-white text-green-400 right-0 font-semibold border-green-600 left-0 ml-auto mr-auto rounded-md px-1 py-[1px] w-12 bottom-0 hover:bg-green-500 hover:text-white ">
+        <button
+          className="absolute bg-white text-[#43766C] right-0 font-semibold border-[#43766C] left-0 ml-auto mr-auto rounded-md w-12 bottom-0 hover:bg-[#43766C] hover:text-white border"
+          onClick={() => handleClick(card)}
+        >
           add+
-        </div>
+        </button>
       </div>
     </div>
   ));

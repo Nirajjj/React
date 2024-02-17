@@ -7,12 +7,17 @@ import Contact from "./src/components/contactUs";
 import Error from "./src/components/error";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Resinfo from "./src/components/restaurantInfo";
+import { Provider } from "react-redux";
+import appStore from "./src/utils/appStore";
+import CartItems from "./src/components/CartItems";
 
 const FullPage = () => (
-  <div className="fullpage">
-    <Header />
-    <Outlet />
-  </div>
+  <Provider store={appStore}>
+    <div className="fullpage">
+      <Header />
+      <Outlet />
+    </div>
+  </Provider>
 );
 
 const approutes = createBrowserRouter([
@@ -38,6 +43,11 @@ const approutes = createBrowserRouter([
       {
         path: "/restaurant/:resID",
         element: <Resinfo />,
+        errorElement: <Error />,
+      },
+      {
+        path: "/cart",
+        element: <CartItems />,
         errorElement: <Error />,
       },
     ],

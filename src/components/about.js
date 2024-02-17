@@ -2,7 +2,7 @@ import UserClass from "./userClass";
 import React from "react";
 const About = () => {
   return (
-    <div>
+    <div className="mt-4">
       <h1 className="font-bold text-3xl text-center">
         About me and this website
       </h1>
