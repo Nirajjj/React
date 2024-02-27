@@ -2,7 +2,6 @@ import { IMG_URL } from "../utils/constatns";
 import { useDispatch } from "react-redux";
 import { removeItem } from "../utils/cartSlice";
 const CartCard = ({ card }) => {
-  console.log(card);
   const dispatch = useDispatch();
   const handleClick = (card) => {
     dispatch(removeItem(card?.card?.info?.id));

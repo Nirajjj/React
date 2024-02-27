@@ -7,18 +7,21 @@ function useRestaurantInfo(resID) {
     fetchData();
   }, []);
   const fetchData = async () => {
-    const resInfo = await fetch(resInfo_API + resID, {
-      headers: {
-        "x-cors-api-key": "temp_d3d854db3c595f104dc6125d136a1eb1",
-      },
-    });
+    const resInfo = await fetch(resInfo_API + resID);
+    // , {
+    //   headers: {
+    //     "x-cors-api-key": "temp_d3d854db3c595f104dc6125d136a1eb1",
+    //   },
+    // });
     const jsonData = await resInfo.json();
+    // console.log(jsonData?.data.cards);
+    setresInfo(
+      jsonData?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards ||
+        jsonData?.data?.cards[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards
+    );
     // console.log(
     //   jsonData?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards
     // );
-    setresInfo(
-      jsonData?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards
-    );
   };
   return resInfo;
 }

@@ -2,11 +2,9 @@ import { useState } from "react";
 import { IMG_URL } from "../utils/constatns";
 import ResMenuCardData from "./ResMenuData";
 const RestoMenuCard = ({ resInfocard, showItems, setShowIndex }) => {
-  console.log(setShowIndex);
   const { title } = resInfocard?.card?.card;
   const { itemCards } = resInfocard?.card?.card;
   function dropDown() {
-    console.log("clicked");
     setShowIndex();
   }
   return (

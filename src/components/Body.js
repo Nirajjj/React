@@ -15,11 +15,12 @@ const Body = () => {
     fetchData();
   }, []);
   const fetchData = async () => {
-    const data = await fetch(res_API, {
-      headers: {
-        "x-cors-api-key": "temp_d3d854db3c595f104dc6125d136a1eb1",
-      },
-    });
+    const data = await fetch(res_API);
+    // , {
+    //   headers: {
+    //     "x-cors-api-key": "temp_d3d854db3c595f104dc6125d136a1eb1",
+    //   },
+    // });
     const jsonData = await data.json();
 
     setrestaurantList(

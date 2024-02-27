@@ -9,14 +9,13 @@ const Resinfo = () => {
   const resInfo = useRestaurantInfo(resID);
   const [showIndex, setShowIndex] = useState(0);
 
-  console.log(showIndex);
   const categories = resInfo.filter((c) => {
     return (
       c.card?.card?.["@type"] ===
       "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
     );
   });
-  console.log(categories);
+
   return resInfo.length === 0 ? (
     <MenuShimmer />
   ) : (

@@ -10,7 +10,7 @@ class UserClass extends React.Component {
   }
   render() {
     const { name } = this.props;
-    console.log(name);
+
     return (
       <div className="about-card-container">
         <div className="about-card">

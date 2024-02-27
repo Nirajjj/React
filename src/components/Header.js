@@ -10,7 +10,7 @@ const Header = () => {
   const [btn, setbtn] = useState("Login");
   const { loginUser } = useContext(UserContext);
   const cartItems = useSelector((store) => store.cart.items);
-  console.log(cartItems);
+
   const [activeNumber, setActiveNumber] = useState(1);
   const handleClick = (elem) => {
     setActiveNumber(elem);
