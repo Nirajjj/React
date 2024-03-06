@@ -16,7 +16,8 @@ function useRestaurantInfo(resID) {
     // console.log(jsonData?.data.cards);
     setresInfo(
       jsonData?.data?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards ||
-        jsonData?.data?.cards[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards
+        jsonData?.data?.cards[3]?.groupedCard?.cardGroupMap?.REGULAR?.cards ||
+        jsonData?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards
     );
     // console.log(
     //   jsonData?.data?.cards[2]?.groupedCard?.cardGroupMap?.REGULAR?.cards

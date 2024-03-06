@@ -8,7 +8,7 @@ const Resinfo = () => {
   const { resID } = useParams();
   const resInfo = useRestaurantInfo(resID);
   const [showIndex, setShowIndex] = useState(0);
-
+  console.log(resInfo);
   const categories = resInfo.filter((c) => {
     return (
       c.card?.card?.["@type"] ===

@@ -140,7 +140,7 @@ a,
   flex-wrap: wrap;
   justify-self: start;
   /* padding: 0 140px; */
-  justify-content: start;
+  justify-content: space-around;
   height: 100%;
   width: 74vw;
   flex-shrink: 0px;
@@ -207,18 +207,25 @@ h4 {
 .search-btn:active {
   border: 1px solid #00b3b3;
 }
-
+.shimmer-main-container {
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
 .shimmer-card-container {
   display: flex;
-  margin: 7vh 0px 0px 10vw;
+  margin-top: 50px;
   flex-wrap: wrap;
+  width: 80vw;
+  justify-content: space-around;
 }
 .shimmer-card {
   width: 17vw;
   height: 300px;
   border-radius: 7px;
   /* background-color: rgb(150, 148, 148); */
-  margin: 15px;
+  /* margin: 15px; */
   display: grid;
   grid-template-rows: 200px 75px;
   padding: 7px;
